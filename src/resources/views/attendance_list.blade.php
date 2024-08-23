@@ -13,20 +13,20 @@
     <div class="pagenation flex_row_space-between">
         <a href='/admin/attendance/staff/{{$id}}?month={{$ymd->copy()->subMonthNoOverflow()->format("Y-m")}}'
             class="pagenation__btn"><span class="pagenation__arrow">
-                ＜</span>前月</a>
+                </span>前月</a>
         <p class="show__month">{{$ymd->format('Y年n月')}}</p>
         <a href='/admin/attendance/staff/{{$id}}?month={{$ymd->copy()->addMonthNoOverflow()->format("Y-m")}}'
-            class="pagenation__btn">後月<span class="pagenation__arrow">＞</span></a>
+            class="pagenation__btn">後月<span class="pagenation__arrow"></span></a>
     </div>
     @else
     <h1 class="title">勤怠一覧</h1>
     <div class="pagenation flex_row_space-between">
         <a href='/attendance/list/?month={{$ymd->copy()->subMonthNoOverflow()->format("Y-m")}}' class="pagenation__btn">
             <span class="pagenation__arrow">
-                ＜< /span>前月</a>
+                </span>前月</a>
         <p class="show__month">{{$ymd->format('Y年n月')}}</p>
         <a href='/attendance/list/?month={{$ymd->copy()->addMonthNoOverflow()->format("Y-m")}}'
-            class="pagenation__btn">後月<span class="pagenation__arrow">＞</span></a>
+            class="pagenation__btn">後月<span class="pagenation__arrow"></span></a>
     </div>
     @endif
     <div class="lists">
